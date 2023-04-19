@@ -1,0 +1,62 @@
+﻿@model SistemaSalud1.Models.Paciente
+@{
+    ViewBag.Title = "MostrarPacienteBuscado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <title>Informacion Personal</title>
+</head>
+<body>
+    <div>
+        <h3>DATOS PERSONALES</h3>
+        <form action="Paciente/Paciente" method="post">
+            <table>
+
+                <tr>
+                    <td><label>Mi identificación es  @Model.Persona.Id</label></td>
+                </tr>
+                <tr>
+                    <td><label>Mi nombre es   @Model.Persona.Nombre</label></td>
+                </tr>
+                <tr>
+                    <td><label>Mis apellidos son   @Model.Persona.Apellido</label></td>
+                </tr>
+                <tr>
+                    <td><label>Mi fecha nacimiento es   @Model.Persona.Fecha_nacimiento.ToShortDateString()</label></td>
+                </tr>
+                <tr>
+                    <td><label>Mi Eps es   @Model.Eps</label></td>
+                </tr>
+                <tr>
+                    <td><label>Mi Historia Clinica es   @Model.Historia_clinica</label></td>
+                </tr>
+                <tr>
+                    <td><label>Mi Cantidad de enfermedades es   @Model.Cantidad_enfermedades</label></td>
+                </tr>
+                <tr>
+                    <td><label>Mi Enfermedad Relevante es   @Model.Enfermedad_relevante</label></td>
+                </tr>
+                <tr>
+                    <td><label>Mi fecha nacimiento es   @Model.Fechas.Fecha_ingreso_eps.ToShortDateString()</label></td>
+                </tr>
+                <tr>
+                    <td><label>Mi Tipo de reminen es  @Model.Sistema.Tipo_regimen</label></td>
+                </tr>
+                <tr>
+                    <td><label>Mi Tipo de Afilacion es  @Model.Sistema.Tipo_afiliacion</label></td>
+                </tr>
+                <tr>
+                    <td><label>Mis semanas cotizadas son  @Model.Sistema.Semana_cotizada</label></td>
+                </tr>
+                <tr>
+                    <td><label>Mis costos son  @Model.Sistema.Costos</label></td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,150 @@
+﻿@model SistemaSalud1.Models.EstadisticasPacientes
+@{
+    ViewBag.Title = "EstadisticasPacientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    
+}
+
+<html>
+<head>
+    <title>Estadisticas</title>
+</head>
+<body>
+    <div>
+        <h3>Porcentajes De Costos Por Eps</h3>
+        <form action="Paciente/Paciente" method="post">
+            <table>
+
+
+                <tr>
+                    <td><label>Sura</label></td>
+                    <td><label>@Model.porcentajeCostos[0]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Nueva Eps</label></td>
+                    <td><label>@Model.porcentajeCostos[1]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Salud Total</label></td>
+                    <td><label>@Model.porcentajeCostos[2]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Sanitas</label></td>
+                    <td><label>@Model.porcentajeCostos[3]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Savia</label></td>
+                    <td><label>@Model.porcentajeCostos[4]</label></td>
+                </tr>
+
+
+            </table>
+            <h3>Total Costos Por Eps</h3>
+            <table>
+                <tr>
+                    <td><label>Sura</label></td>
+                    <td><label>@Model.totalCostos[0]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Nueva Eps</</label></td>
+                    <td><label>@Model.totalCostos[1]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Salud Total</label></td>
+                    <td><label>@Model.totalCostos[2]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Sanitas</label></td>
+                    <td><label>@Model.totalCostos[3]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Savia</label></td>
+                    <td><label>@Model.totalCostos[4]</label></td>
+                </tr>
+
+            </table>
+
+            <h3>Porcentaje Por Pacientes Sin Enfermedades</h3>
+            <table>
+                <tr>
+                    <td><label>Pacientes sin enfermedades es @Model.pacienteSinEnfermedad %</label></td>
+                </tr>
+            </table>
+
+            <h3>Paciente Mayor Costo</h3>
+            <table>
+                <tr>
+                    <td><label>El Paciente con mayor Costo es @Model.pacienteMayorCosto.Persona.Nombre identificado con cédula @Model.pacienteMayorCosto.Persona.Id</label></td>
+                </tr>
+            </table>
+
+            <h3>Porcentaje Por PacientesPor Rango Edades</h3>
+            <table>
+                <tr>
+                    <td><label>Niños</label></td>
+                    <td><label>@Model.pacientesRangoEdades[0]</label></td>
+                </tr>
+                <tr>
+                    <td><label>adolecentes</label></td>
+                    <td><label>@Model.pacientesRangoEdades[1]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Jovenes</label></td>
+                    <td><label>@Model.pacientesRangoEdades[2]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Adulto</label></td>
+                    <td><label>@Model.pacientesRangoEdades[3]</label></td>
+                </tr>
+                <tr>
+                    <td><label>AdultoMayor</label></td>
+                    <td><label>@Model.pacientesRangoEdades[4]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Anciano</label></td>
+                    <td><label>@Model.pacientesRangoEdades[5]</label></td>
+                </tr>
+
+            </table>
+
+            <h3>Porcentaje De Pacientes Por Regimen</h3>
+            <table>
+                <tr>
+                    <td><label>Contributivo</label></td>
+                    <td><label>@Model.pacientesPorRegimen[0]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Subsidiado</label></td>
+                    <td><label>@Model.pacientesPorRegimen[1]</label></td>
+                </tr>
+
+
+            </table>
+            <h3>Porcentaje De Pacientes Por Afilacion</h3>
+            <table>
+                <tr>
+                    <td><label>Cotizante</label></td>
+                    <td><label>@Model.pacientesPorAfilacion[0]</label></td>
+                </tr>
+                <tr>
+                    <td><label>Beneficiario</label></td>
+                    <td><label>@Model.pacientesPorAfilacion[1]</label></td>
+                </tr>
+
+
+            </table>
+            <h3>Porcentaje De Pacientes por enfermedad relevante sea cancer</h3>
+            
+            <table>
+                <tr>
+                    <td><label>Enfermedad Relevante Sea Cancer</label></td>
+                    <td><label>@Model.EnfermedadRelevante</label></td>
+                
+
+
+            </table>
+        </form>
+    </div>
+</body>
+</html>

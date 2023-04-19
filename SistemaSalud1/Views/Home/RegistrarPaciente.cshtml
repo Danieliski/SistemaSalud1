@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewBag.Title = "RegistrarPaciente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <title>Registrar Paciente</title>
+</head>
+<body>
+    <div>
+        <h3>DATOS PERSONALES</h3>
+        @using (Html.BeginForm("MostrarPaciente", "Home", FormMethod.Post))
+        {
+        <form action="Paciente/Paciente" method="post">
+            <table>
+                <tr>
+                    <td><label>Identificación:</label></td>
+                    <td><input type="text" name="id" value=" " /></td>
+                </tr>
+                <tr>
+                    <td><label>Nombre: </label></td>
+                    <td><input type="text" name="nombre" value=" " autocomplete="off" /></td>
+                </tr>
+                <tr>
+                    <td><label>Apellidos:</label></td>
+                    <td><input type="text" name="apellido" value=" " autocomplete="off"/></td>
+                </tr>
+                <tr>
+                    <td><label>Fecha nacimiento:</label></td>
+                    <td><input type="date" name="fecha_nacimiento" value=" " /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="eps">Eps</label>
+                        
+                        
+                    </td>
+                    <td>
+                        <select name="eps" id="eps">
+                            
+                            <option value="Nueva Eps">Nueva Eps</option>
+                            <option value="Sura">Sura</option>
+                            <option value="Salud Total">Salud Total</option>
+                            <option value="Sanitas">Sanitas</option>
+                            <option value="Savia">Savia</option>
+                        </select>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Historia Clinica:</label></td>
+                    <td><input type="text" name="historia_clinica" value=" " autocomplete="off"/></td>
+                </tr>
+                <tr>
+                    <td><label>Cantidad Enfermedades:</label></td>
+                    <td><input type="text" name="cantidad_enfermedades" value=" " autocomplete="off" /></td>
+                </tr>
+                <tr>
+                    <td><label>Enfermedad Relevante:</label></td>
+                    <td><input type="text" name="enfermedad_relevante" value=" " autocomplete="off" /></td>
+                </tr>
+
+                
+                <tr>
+                    <td><label>fecha ingreso eps:</label></td>
+                    <td><input type="date" name="fecha_ingreso_eps" value=" " /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="tipo regimen">tipo_Regimen</label>
+                    </td>
+                    <td>
+                        <select name="tipo_regimen" id="tipo_regimen">
+
+                            <option value="Contributivo">Contributivo</option>
+                            <option value="Subsidiado">Subsidiado</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="tipo afiliacion">tipo_afiliacion</label>
+                    </td>
+                    <td>
+                        <select name="tipo_afiliacion" id="tipo_afiliacion">
+
+
+                            <option value="Cotizante">Cotizante</option>
+                            <option value="Beneficiario">Beneficiario</option>
+
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>semana cotizada:</label></td>
+                    <td><input type="number" name="semana_cotizada" value=" " autocomplete="off" /></td>
+                </tr>
+                <tr>
+                    <td><label>costos:</label></td>
+                    <td><input type="number" name="costos" value=" " autocomplete="off"/></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="enviar" value="Enviar" /></td>
+                </tr>
+            </table>
+        </form>
+        }
+    </div>
+</body>
+</html>
+

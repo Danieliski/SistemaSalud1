@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "EscogerEps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title>SELECCIONAR</title>
+</head>
+<body>
+    <div>
+        <h3>Seleccione la eps</h3>
+        @using (Html.BeginForm("MostrarCambioEps", "Home", FormMethod.Post))
+        {
+            <form action="Paciente/Paciente" method="post">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="eps">Eps</label>
+                        </td>
+                        <td>
+                            <select name="eps" id="eps">
+                                
+                                <option value="Nueva Eps">Nueva Eps</option>
+                                <option value="Sura">Sura</option>
+                                <option value="Salud Total">Salud Total</option>
+                                <option value="Sanitas">Sanitas</option>
+                                <option value="Savia">Savia</option>
+                            </select>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="Cambiar" value="Cambiar" /></td>
+                    </tr>
+                </table>
+            </form>
+        }
+    </div>
+</body>
+</html>

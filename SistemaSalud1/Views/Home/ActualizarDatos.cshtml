@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "ActualizarDatos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <title>Actualizar</title>
+</head>
+<body>
+    <div>
+        <h3>Actualizar Datos</h3>
+        @using (Html.BeginForm("MostrarDatos", "Home", FormMethod.Post))
+        {
+            <form action="Paciente/Paciente" method="post">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="eps">Eps</label>
+                        </td>
+                        <td>
+                            <select name="eps" id="eps">
+
+                                <option value="Nueva Eps">Nueva Eps</option>
+                                <option value="Sura">Sura</option>
+                                <option value="Salud Total">Salud Total</option>
+                                <option value="Sanitas">Sanitas</option>
+                                <option value="Savia">Savia</option>
+                            </select>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="tipo afiliacion">tipo_afiliacion</label>
+                        </td>
+                        <td>
+                            <select name="tipo_afiliacion" id="tipo_afiliacion">
+
+
+                                <option value="Cotizante">Cotizante</option>
+                                <option value="Beneficiario">Beneficiario</option>
+
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Ingrese su nueva Historia:</label></td>
+                        <td><input type="text" name="Historia" value=" " /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Enfermedad Relevante:</label></td>
+                        <td><input type="text" name="enfermedad_relevante" value=" " /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Ingrese nuevos Costos:</label></td>
+                        <td><input type="number" name="Costos" value=" " /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="Cambiar" value="Enviar" /></td>
+                    </tr>
+                </table>
+            </form>
+        }
+    </div>
+    
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "ActualizarHistoria";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title>Actualizar Historia </title>
+</head>
+<body>
+    <div>
+        <h3>Actualizar Historia</h3>
+        @using (Html.BeginForm("MostrarNuevaHistoria", "Home", FormMethod.Post))
+        {
+            <form action="Paciente/Paciente" method="post">
+                <table>
+                    <tr>
+                        <td><label>Ingrese su nueva Historia:</label></td>
+                        <td><input type="text" name="Historia" value=" " /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="Cambiar" value="Enviar" /></td>
+                    </tr>
+                </table>
+            </form>
+        }
+    </div>
+</body>
+</html>
+

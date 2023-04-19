@@ -1,0 +1,27 @@
+﻿@model SistemaSalud1.Models.Paciente
+@{
+    ViewBag.Title = "MostrarCambioEps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<html>
+<head>
+    <title>Informacion Personal</title>
+</head>
+<body>
+    <div>
+        <h3>CAMBIO</h3>
+        <form action="Paciente/Paciente" method="post">
+            <table>
+
+                <tr>
+                    <td><label>Su nueva eps es @Model.Eps </label></td>
+                </tr>
+
+
+            </table>
+        </form>
+    </div>
+</body>
+</html>

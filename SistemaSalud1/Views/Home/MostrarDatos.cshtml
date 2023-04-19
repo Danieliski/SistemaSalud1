@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "MostrarDatos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <title>Informacion Personal</title>
+</head>
+<body>
+    <div>
+        <h3>CAMBIO</h3>
+        <form action="Paciente/Paciente" method="post">
+            <table>
+
+                <tr>
+                    <td><label>Nueva Eps es @Model.Eps </label></td>
+                </tr>
+                <tr>
+                    <td><label>Mi Tipo de Afilacion es  @Model.Sistema.Tipo_afiliacion</label></td>
+                </tr>
+                <tr>
+                    <td><label>Nueva Historia es @Model.Historia_clinica </label></td>
+                </tr>
+                <tr>
+                    <td><label>Mi Enfermedad Relevante es   @Model.Enfermedad_relevante</label></td>
+                </tr>
+                <tr>
+                    <td><label>Nuevo Costo es @Model.Sistema.Costos </label></td>
+                </tr>
+
+
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+
