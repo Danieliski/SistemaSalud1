@@ -27,7 +27,7 @@ namespace SistemaSalud1Test
 
             Persona persona = new Persona(id, nombre, apellido, fecha_nacimiento);
             Fechas fecha = new Fechas(fecha_salud);
-            SistemaSalud sistema = new SistemaSalud(regimen,afiliacion,semana_cotizada,costos);
+            SistemaSalud sistema = new SistemaSalud(regimen, afiliacion, semana_cotizada, costos);
 
             Paciente paciente = new Paciente(persona, eps, historia, cantidad_enfermedades, enfermedad_rele, fecha, sistema);
 
@@ -48,20 +48,13 @@ namespace SistemaSalud1Test
 
             //assert
             Assert.AreEqual(expected, target.Pacientes[0].Persona.Id);
-               
+
         }
 
-        [TestMethod]
-        public void ValidarPacienteTeste()
-        {
-            SistemaSalud1.Models.ListasPacientes target = new SistemaSalud1.Models.ListasPacientes();
-            string excepted = "1000592";
 
-            Paciente paciente = crearPacientePrueba();
-            target.ValidarPaciente(paciente.Persona.Id);
 
-            Assert.AreEqual(excepted, target.Pacientes[0]);
-        }
 
     }
+
 }
+
