@@ -1,0 +1,28 @@
+﻿@model SistemaSalud1.Models.Paciente
+
+@{
+    ViewBag.Title = "MostrarAfiliacion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <title>Informacion Personal</title>
+</head>
+<body>
+    <div>
+        <h3>Cambio De Afiliacion</h3>
+        <form action="Paciente/Paciente" method="post">
+            <table>
+
+                <tr>
+                    <td><label>Su nuevo costo es @Model.Sistema.Tipo_afiliacion </label></td>
+                </tr>
+
+
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+

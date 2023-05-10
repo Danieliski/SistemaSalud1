@@ -75,6 +75,20 @@ namespace SistemaSalud1.Models
 
             paciente.Sistema.Tipo_afiliacion = new_afiliacion;
         }
+        public void ActualizarEnfermedad(Paciente paciente, string new_enfermedad)
+        {
+            paciente.Enfermedad_relevante = new_enfermedad;
+        }
+
+        public void AcutalizarAfiliacion(Paciente paciente, string new_afiliacion)
+        {
+            paciente.Sistema.Tipo_afiliacion = new_afiliacion;
+        }
+
+        public void ActualizarCostos(Paciente paciente, int new_costos)
+        {
+            paciente.Sistema.Costos = new_costos;
+        }
 
         public static double CalcularProcentaje(double num1, double num2)
         {

@@ -10,8 +10,26 @@
 </head>
 <body>
     <div>
-        <h3>Actualizar Datos</h3>
-        @using (Html.BeginForm("MostrarDatos", "Home", FormMethod.Post))
+        <h3>Actualizar Historia</h3>
+        @using (Html.BeginForm("MostrarNuevaHistoria", "Home", FormMethod.Post))
+        {
+            <form action="Paciente/Paciente" method="post">
+                <table>
+                    <tr>
+                        <td><label>Ingrese su nueva Historia:</label></td>
+                        <td><input type="text" name="Historia" value=" " /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="Cambiar" value="Enviar" /></td>
+                    </tr>
+                </table>
+            </form>
+        }
+
+    </div>
+    <div>
+        <h3>CAMBIO DE EPS</h3>
+        @using (Html.BeginForm("MostrarCambioEps", "Home", FormMethod.Post))
         {
             <form action="Paciente/Paciente" method="post">
                 <table>
@@ -32,6 +50,36 @@
                         </td>
                     </tr>
                     <tr>
+                        <td><input type="submit" name="Cambiar" value="Enviar" /></td>
+                    </tr>
+                </table>
+            </form>
+        }
+    </div>
+    <div>
+        <h3>CAMBIO DE costos</h3>
+        @using (Html.BeginForm("MostrarCambioCostos", "Home", FormMethod.Post))
+        {
+            <form action="Paciente/Paciente" method="post">
+                <table>
+                    <tr>
+                        <td><label>Ingrese nuevos Costos:</label></td>
+                        <td><input type="number" name="Costos" value=" " /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="Cambiar" value="Enviar" /></td>
+                    </tr>
+                </table>
+            </form>
+        }
+    </div>
+    <div>
+        <h3>Cambio De Afilacion</h3>
+        @using (Html.BeginForm("MostrarAfiliacion", "Home", FormMethod.Post))
+        {
+            <form action="Paciente/Paciente" method="post">
+                <table>
+                    <tr>
                         <td>
                             <label for="tipo afiliacion">tipo_afiliacion</label>
                         </td>
@@ -45,18 +93,22 @@
                             </select>
                         </td>
                     </tr>
-
                     <tr>
-                        <td><label>Ingrese su nueva Historia:</label></td>
-                        <td><input type="text" name="Historia" value=" " /></td>
+                        <td><input type="submit" name="Cambiar" value="Enviar" /></td>
                     </tr>
+                </table>
+            </form>
+        }
+    </div>
+    <div>
+        <h3>Cambio Enfermedad Relevante</h3>
+        @using (Html.BeginForm("MostrarEnfermedadRelevante", "Home", FormMethod.Post))
+        {
+            <form action="Paciente/Paciente" method="post">
+                <table>
                     <tr>
                         <td><label>Enfermedad Relevante:</label></td>
                         <td><input type="text" name="enfermedad_relevante" value=" " /></td>
-                    </tr>
-                    <tr>
-                        <td><label>Ingrese nuevos Costos:</label></td>
-                        <td><input type="number" name="Costos" value=" " /></td>
                     </tr>
                     <tr>
                         <td><input type="submit" name="Cambiar" value="Enviar" /></td>
@@ -65,7 +117,8 @@
             </form>
         }
     </div>
-    
+
+
 </body>
 </html>
 
